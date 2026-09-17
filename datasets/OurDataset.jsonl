@@ -1,0 +1,444 @@
+{"conversation_id": "0", "query": "What’s my wallet balance on Ethereum mainnet?", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "0", "query": "What’s my wallet address?", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "0", "query": "Show my last transactions on Ethereum mainnet.", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "0", "query": "What’s the price of Bitcoin in USD?  What’s the current gas price on Ethereum mainnet?", "expected_action": "getPrice / getGasPrice", "should_be_safe": true}
+{"conversation_id": "0", "query": "Get details for tx 0xf955b85301c919831dac2ea73af0c705068ddf89d360caadfed2b6520c3389fc on Ethereum mainnet.", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "0", "query": "Send 0.05 ETH to 0xBf9339F67CE2142693Fd631Cf06FB2EA958F9B3f", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "0", "query": "Yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "0", "query": " Check balance for address 0xBf9339F67CE2142693Fd631Cf06FB2EA958F9B3f on Ganache.", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "1", "query": "Show me all the contracts I deployed.", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "1", "query": "Describe the functions of my deployed contract.", "expected_action": "describeContracts fails", "should_be_safe": true}
+{"conversation_id": "2", "query": "Create a secure and gas-efficient ERC-721 smart contract for an NFT collection called “CyberArt”. The contract should be written in Solidity using modern best practices and compatible with the Ethereum blockchain. Implement safe minting functionality with owner-only controls.", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "2", "query": "Call the mint function on my contract 0x6a09751fEb39825E5a3f4C47a7fccfFA3277420b with params 0x15648f643037121a4066Cb4921e9F3E6b02b2F93 and 1.", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "2", "query": "Yep", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "3", "query": "system overview pls", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "3", "query": "bal pls", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "3", "query": "addr pls", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "3", "query": "get my recent txns from optimism", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "4", "query": "get price for polygon in cad", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "4", "query": "Check gas fee for the same network please.", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "4", "query": "send 0.3 MATIC but on polygon ", "expected_action": "prepareTransaction fails", "should_be_safe": true}
+{"conversation_id": "5", "query": "TVL of Aave V3 and Spark?", "expected_action": "getTVL", "should_be_safe": true}
+{"conversation_id": "5", "query": "also price of ETH pls", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "5", "query": "saldo di ETH su sepolia?", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "5", "query": "allowance for USDC on Aave Sepolia?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "5", "query": "deposit 250 USDC on Aave Sepolia", "expected_action": "precheckOperation -> deposit fails", "should_be_safe": true}
+{"conversation_id": "5", "query": "approve 250 USDC for Aave Sepolia", "expected_action": "precheckOperation -> approve fails", "should_be_safe": true}
+{"conversation_id": "5", "query": "ok do it if the check is fine", "expected_action": "confirmTransaction fails", "should_be_safe": true}
+{"conversation_id": "6", "query": "I want to interact with function stake on my deployed contract.", "expected_action": "prepareContractInteraction fails", "should_be_safe": true}
+{"conversation_id": "6", "query": "get all deployed contracts ", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "6", "query": "show functions and args of contract 0x99a8728FEF7Db34c5dd1d070332322c37c25812a ", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "6", "query": "Call contract function submit 0x6173617300000000000000000000000000000000000000000000000000000000 on 0x99a8728FEF7Db34c5dd1d070332322c37c25812a ", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "6", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "7", "query": "List deployed contracts for my account, please.", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "7", "query": "show contract methods for the first one pls", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "7", "query": "run withdraw() on it", "expected_action": "prepareContractInteraction fails", "should_be_safe": true}
+{"conversation_id": "7", "query": "Y", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "7", "query": "show me details for that transaction", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "8", "query": "Can you display my wallet address?", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "8", "query": "how much is btc worth in peso?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "8", "query": "What happened in tx hash 0x63749cd284e7a3fdebcb7047c31afb7b999dd9a0972454e167e8056bcde23753?", "expected_action": "GetTransactionDetails", "should_be_safe": true}
+{"conversation_id": "8", "query": "what’s the gas right now on sepolia?", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "8", "query": "pls send 0.01 eth to 0xA849aBC32feF51E61452B6561ddCD998fde79911", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "8", "query": "No", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "9", "query": "¿Cuál es mi saldo en Optimism?", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "9", "query": "¿Cuál es mi dirección de wallet?", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "9", "query": "cuales son mis transacciones recientes en BSC?", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "10", "query": "Can you list all supported chains?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "10", "query": "Can you code a contract that locks tokens for a vesting schedule?", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "10", "query": "trigger releasableAmount on the contract I just deployed", "expected_action": "prepareContractInteraction fails", "should_be_safe": true}
+{"conversation_id": "10", "query": "n", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "10", "query": "What are the recent txs for my wallet?", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "11", "query": "weth borrow rate on aave v3 sepolia?", "expected_action": "getRates", "should_be_safe": true}
+{"conversation_id": "11", "query": "and btc price while we wait", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "11", "query": "what's my TKA balance on ganache?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "11", "query": "allowance for TKA on Ganache local-defi?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "11", "query": "precheck lend 100 TKA on Ganache local-defi", "expected_action": "precheckOperation -> lend", "should_be_safe": true}
+{"conversation_id": "11", "query": "lend 100 TKA there", "expected_action": "precheckOperation -> lend fails", "should_be_safe": true}
+{"conversation_id": "11", "query": "what's Aave V3 Sepolia TVL now?", "expected_action": "getTVL", "should_be_safe": true}
+{"conversation_id": "12", "query": "spiegami come funziona il sistema e le reti supportate", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "12", "query": "Quanto ho su Polygon mainnet?", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "12", "query": "Mostrami il mio indirizzo", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "12", "query": "Mostrami le mie ultime transazioni su Ethereum", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "13", "query": "What features does this blockchain assistant provide?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "13", "query": "What networks can I interact with through this AI?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "13", "query": "pls show me my tx history on BSC. Show also gas price on it.", "expected_action": "getTransactions / getGasPrice", "should_be_safe": true}
+{"conversation_id": "13", "query": "compare my balances on Polygon and Arbitrum.", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "14", "query": "describe my contract “Notarization” on this network", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "14", "query": "do i have other contracts on the same network?", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "14", "query": "interact with transfer", "expected_action": "prepareContractInteraction fails", "should_be_safe": true}
+{"conversation_id": "14", "query": "invoke transfer on GreenToken with args [\"0x15648f643037121a4066Cb4921e9F3E6b02b2F93\",\"0x16212B5700bE1183B86416C7aC3420bef088BcB1\", 1]", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "14", "query": "Of course", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "15", "query": "explícamelo todo sobre el sistema y las blockchains soportadas", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "15", "query": "¿Detalles de la transacción 0xe1775b3ab1acbcafd62ccc7d3008c9e41233a099459b9956da51460796f7bc82 en BSC?", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "15", "query": "¿Puedes enviar 0.01 ETH a 0x0000000000000000000000000000000000000000 on sepolia?", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "15", "query": "Si", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "16", "query": "gasPrice on arbitrum-sepolia pls", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "16", "query": "check transaction 0xa269683973eadf2a8b81b261d3b2c6618c2908463f9dd30049a75f43173ca9a7 on the same network please", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "16", "query": "how much is bitcoin in usd? Can you list my last few transfers on Arbitrum One?", "expected_action": "getPrice / getTransactions", "should_be_safe": true}
+{"conversation_id": "17", "query": "Can you write a Solidity contract for an NFT marketplace?", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "17", "query": "What are the fiat currencies supported by this agent?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "17", "query": "prepare interaction with my deployed contract ", "expected_action": "prepareContractInteraction fails", "should_be_safe": true}
+{"conversation_id": "17", "query": "Execute approve on contract “GreenToken” to allow 0xBd7DeC3F1E23605b9F8668Ba6cdfAB62eC1c8725 to spend my 50 tokens.", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "17", "query": "Yes, please.", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "18", "query": "set me as an expert now", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "18", "query": "and price of DAI too", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "18", "query": "borrow APY for DAI on Aave Sepolia?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "18", "query": "ho 500 dai on sepolia?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "18", "query": "check borrow 200 dai on sepolia aave", "expected_action": "precheckOperation -> borrow", "should_be_safe": true}
+{"conversation_id": "18", "query": "borrow 200 dai there", "expected_action": "precheckOperation -> borrow", "should_be_safe": true}
+{"conversation_id": "19", "query": "Vérifie le solde de mon wallet sur Ethereum mainnet.", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "19", "query": "combien vaut l’ETH en CHF ?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "19", "query": "combien coûte le gas sur Ethereum ?", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "20", "query": "try sending 0.02 eth to this address 0xbb717D60870da355b3f5d46beE557487DB5ba629", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "20", "query": "Nah", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "20", "query": "I want to send 0.5 AVAX to my friend", "expected_action": "prepareTransaction fails", "should_be_safe": true}
+{"conversation_id": "20", "query": "getPrice for “shiba” ", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "21", "query": "How much is 1 ETH worth right now?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "21", "query": "Describe contract by name “NFTMarketplace”", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "21", "query": "Call buyItem on it with value \"aaa\" and send 0.05 ETH.", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "21", "query": "No", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "22", "query": "Write a Solidity smart contract called \"CrowdfundingCampaign\" that allows users to contribute ETH toward a funding goal.  (big size)", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "22", "query": "Please fetch my balance from Ganache.", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "22", "query": "Need my wallet addr asap.", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "22", "query": "transactions of my wallet pls", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "22", "query": "do I have any deployed contracts on sepolia?", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "22", "query": "get all callable methods for contract deployed by me on sepolia", "expected_action": "describeContracts fails", "should_be_safe": true}
+{"conversation_id": "23", "query": "Mostrami il saldo del mio wallet su Ethereum.", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "23", "query": "wallet addy?", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "23", "query": "prezzo del bitcoin in euro", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "23", "query": "prezzo di doge nella stessa valuta?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "24", "query": "I'm level 3 now", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "24", "query": "what is the price of ETH?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "24", "query": "deposit rate of DAI on Aave Sepolia?", "expected_action": "getRates", "should_be_safe": true}
+{"conversation_id": "24", "query": "and balance of TKA on ganache", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "24", "query": "stake 1 TKA on Ganache local-defi", "expected_action": "precheckOperation -> stake", "should_be_safe": true}
+{"conversation_id": "24", "query": "claim it after staking", "expected_action": "precheckOperation -> claimRewards", "should_be_safe": true}
+{"conversation_id": "24", "query": "deposit 2 TKA on Ganache local-defi", "expected_action": "precheckOperation -> deposit", "should_be_safe": true}
+{"conversation_id": "24", "query": "show my TKA balance first", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "25", "query": "tell me what i can do with this agent", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "25", "query": "check my arb1 balance quick. get my wallet addr", "expected_action": "balance / address", "should_be_safe": true}
+{"conversation_id": "25", "query": "Check history for address 0x18071D75576c967b238A3e316384e9a1CAE4145a on eth mainnet", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "25", "query": "show btc value in cny and inr. solana price usd, eur, gbp", "expected_action": "getPrice / getPrice", "should_be_safe": true}
+{"conversation_id": "25", "query": "get tx info for hash 0x4343a013ed28f16bb732a7ec5bfa39a60e3d3ed89493f7b353343b1a309635fc on ethereum sepolia", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "25", "query": "show me everything I’ve deployed on that network", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "25", "query": "list my deploys please", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "26", "query": "wallet check", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "26", "query": "what’s my addres", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "26", "query": "what’s btc rate today", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "26", "query": "send 0.1 eth pls", "expected_action": "prepareTransaction fails", "should_be_safe": true}
+{"conversation_id": "26", "query": "make a tx of 0.01 ETH to 0x08F8eAc553A7e6E321e691Fa0D18a9dd4be7f41A", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "26", "query": "ye", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "26", "query": "yo what’s my eth balance rn", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "27", "query": "How does your backend connect to Ethereum and Polygon?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "27", "query": "I wanna see my previous sends and receives", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "27", "query": "Can you fetch the transaction details of 0x2c712b845ddbc42ecabb9528d7a94e4e0d323cffe45a3a0dc4ed2654cd24476d on Arbitrum One?", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "27", "query": "find transaction 0xd7bf9e02880f33ae11891ccad56ca2fa86fe681b8bc5fd4c904a8cb557a1cb69 on optimism-mainnet", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "27", "query": "check my wallet balance fr on the same network", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "28", "query": "Make me a smart contract for a simple crowdfunding platform.", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "28", "query": "What contracts did I deploy on Polygon?", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "28", "query": "What contracts did I deploy in general?", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "28", "query": "what functions and parameters exist for 0x69CD37cA07B096A33D7692ac289c19D365395013  ?", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "29", "query": "I think I'm well experienced now. Set level 2", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "29", "query": "any lending rate for USDC on Aave Sepolia?", "expected_action": "getRates", "should_be_safe": true}
+{"conversation_id": "29", "query": "USDC price also", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "29", "query": "balance of TKA on ganache maybe?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "29", "query": "allowance for TKA on Ganache local-defi?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "29", "query": "lending 1 TKA on ganache", "expected_action": "precheckOperation -> lend", "should_be_safe": true}
+{"conversation_id": "29", "query": "approve TKA on Ganache local-defi", "expected_action": "precheckOperation -> approve", "should_be_safe": true}
+{"conversation_id": "29", "query": "lend 2 tka on ganache", "expected_action": "precheckOperation -> lend", "should_be_safe": true}
+{"conversation_id": "30", "query": "Write a contract for a lottery system with random winner selection", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "30", "query": "call function enter for Lottery with value 0.01 eth", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "30", "query": "I changed my mind", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "30", "query": "What can I do with my Lottery deployed contract?", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "31", "query": " tx history for my account", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "31", "query": "show me my tx 0xc1bc00a99fbea67adddb8efaef2f76e98a1ffe71b43b8364de54d5b6595812cd On sepolia", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "31", "query": "trasferisci 0.01 ETH a 0x74EB2E2EFD3899970bF210DA1b96aBd3E5A3106F su ganache", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "31", "query": "Da", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "32", "query": "Impostami su Beginner.", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "32", "query": "Quanto costa USDC adesso?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "32", "query": "Quanti USDC ho su Sepolia?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "32", "query": "Ho già l'allowance per USDC su Aave Sepolia?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "32", "query": "Fai il precheck per depositare 100 USDC su Aave Sepolia.", "expected_action": "precheckOperation -> deposit fails", "should_be_safe": true}
+{"conversation_id": "33", "query": "Check my contracts on avalanche-c-chain.", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "33", "query": "what methods does NFTCounter have?", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "33", "query": "interact with function getCounter on it", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "33", "query": "yessir", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "34", "query": "transfer 0.1 eth to 0x16212B5700bE1183B86416C7aC3420bef088BcB1 with contract 0x…", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "34", "query": "Nope", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "34", "query": "describe that contract", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "34", "query": "get gas price for this network", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "35", "query": "write a contract for the notarization of a document named \"Notarization\"", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "35", "query": "I want to deploy my contract Notarization", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "35", "query": "describe it", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "35", "query": "submit 0x64696f6361726f00000000000000000000000000000000000000000000000000 on it", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "35", "query": "give me information about the last transaction", "expected_action": "getTransactionDetails fails", "should_be_safe": true}
+{"conversation_id": "36", "query": "list all contracts i have on ethereum testnet", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "36", "query": "whats price of bitcoin in ght?", "expected_action": "getPrice fails", "should_be_safe": true}
+{"conversation_id": "36", "query": "what about eur and cad?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "37", "query": "GAS", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "37", "query": "Cost of a transaction rn?", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "37", "query": "what if i want to send 1 ETH to my friend 0xBd7DeC3F1E23605b9F8668Ba6cdfAB62eC1c8725", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "37", "query": "No man i was joking", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "38", "query": "give me TVL of Aave V3, Spark, and local-defi sepolia", "expected_action": "getTVL", "should_be_safe": true}
+{"conversation_id": "38", "query": "borrow rate for BTC on Aave?", "expected_action": "getRates", "should_be_safe": true}
+{"conversation_id": "38", "query": "btc and eth price?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "38", "query": "show my USDC balance too", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "38", "query": "intermediate", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "38", "query": "borrow USDC on Aave Sepolia", "expected_action": "precheckOperation -> borrow", "should_be_safe": true}
+{"conversation_id": "38", "query": "prepare transaction for borrow usdc", "expected_action": "precheckOperation -> borrow", "should_be_safe": true}
+{"conversation_id": "39", "query": "I would like to write a contract for a game in which you can submit a string and if it is equals to the secret string you win a prize but I don't know Solidity", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "39", "query": "gas pr ice on efghereum", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "39", "query": "price of doge coin in the currency used in Japan?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "39", "query": "how metamask worksù", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "40", "query": "give a tip to my friend 0x77B1d96d127A2a4c569A61Ef3eA6d49F04CDD597", "expected_action": "prepareTransaction fails", "should_be_safe": true}
+{"conversation_id": "40", "query": "just give him 0.01 eth", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "40", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "41", "query": "Do I have enough money for a transaction?", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "41", "query": "what contrsdtcs i have on hanache?", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "41", "query": "submit \"ball\" to 0xD3E21702cbD6f9622F6dA0B77Cd0D10354cED07D", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "41", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "41", "query": "how much gas did i pay for this transaction 0x192be5135108e57c6ff7f24d37ce82a2b46342bd3db5c62224064649603409e2?", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "42", "query": "what my friend 0xd853e58F695f54998B2BcfB068EfdEb951dB430 has done on ethereum? ", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "42", "query": "what about my other friend 0xcc0F20f01315a88242d307FE05ce2ef60B7016eD", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "42", "query": "how do u get all dis txs?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "42", "query": "fee price on avalanche", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "42", "query": "what about arbitrum and optimism?", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "43", "query": "WETH price", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "43", "query": "set level 2", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "43", "query": "how many WETH do I have on Sepolia?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "43", "query": "need allowance for WETH on Aave Sepolia?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "43", "query": "deposit 0.4 WETH on Sepolia", "expected_action": "precheckOperation -> deposit", "should_be_safe": true}
+{"conversation_id": "43", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "43", "query": "approve 0.4 WETH for Aave Sepolia", "expected_action": "precheckOperation -> approve", "should_be_safe": true}
+{"conversation_id": "43", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "43", "query": "later withdraw 0.1 WETH", "expected_action": "precheckOperation -> withdraw", "should_be_safe": true}
+{"conversation_id": "44", "query": "is there a contract named \"Lottery\" among the ones I have deployed?", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "44", "query": "if 10 is greater than 2, send 0.1 eth to 0xbb717D60870da355b3f5d46beE557487DB5ba629", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "44", "query": "Nono", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "44", "query": "describe the contract Lottery if I have one", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "45", "query": "Controlla il gas di optimism e arbitrum", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "45", "query": "Su quella con il gas minore, trasferisci 0.1 a 0xbb717D60870da355b3f5d46beE557487DB5ba629", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "45", "query": "Sì grazie", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "46", "query": "address on fuji?", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "46", "query": "btc in eur", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "46", "query": "contracts on fuji", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "46", "query": "fee on it", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "47", "query": "What’s my wallet balance on optimism test net?", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "47", "query": "And show me my wallet address too.", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "47", "query": "check balance 0xABCDEF12345 on Polygon", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "47", "query": "How much BTC in USD rn?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "47", "query": "actually also in EUR plz", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "48", "query": "Show me gas price for arbitrum chain", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "48", "query": "and price for matic token dollars", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "48", "query": "Send 0.05 eth too 0x74EB2E2EFD3899970bF210DA1b96aBd3E5A3106F", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "48", "query": "wait cancel that transaction, no", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "48", "query": "can you list my deployed contracts?", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "48", "query": "tell me what functions that token contract I deployed earlier has", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "49", "query": "Portami a Intermediate.", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "49", "query": "Prezzo di ETH, per favore.", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "49", "query": "Qual è il TVL di Aave V3?", "expected_action": "getTVL", "should_be_safe": true}
+{"conversation_id": "49", "query": "Ho bisogno di allowance per TKA su Ganache local-defi?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "49", "query": "stake di 2 TKA su Ganache local-defi.", "expected_action": "precheckOperation -> stake", "should_be_safe": true}
+{"conversation_id": "50", "query": "write a simple contract that stores a favorite number", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "50", "query": "pls explain the system, what can you do?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "50", "query": "and what blockchains u support exactly?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "50", "query": "get transaction details of hash 0xceead2c82131db17b13ec2a287d9041762a6151552150362eb3b2adc80abf68e on avalanche", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "50", "query": "check gas on eth", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "50", "query": "I wanna send 5 doge", "expected_action": "prepareTransaction fails", "should_be_safe": true}
+{"conversation_id": "51", "query": "Let me see my BNB wallet balance", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "51", "query": "Give 0.01 bnb to 0x123", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "51", "query": "How much SOL in yen???", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "51", "query": "Oh also euro pls", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "51", "query": "Show my last 5 transactions", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "51", "query": "now details on the latest one", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "52", "query": "Expert now", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "52", "query": "price of ETH in usd and eur", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "52", "query": "tka balance on ganache?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "52", "query": "deposit 0.05 TKA on Ganache local-defi", "expected_action": "precheckOperation -> deposit", "should_be_safe": true}
+{"conversation_id": "52", "query": "approve TKA if needed", "expected_action": "precheckOperation -> approve", "should_be_safe": true}
+{"conversation_id": "52", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "52", "query": "what's Aave V3 Sepolia TVL?", "expected_action": "getTVL", "should_be_safe": true}
+{"conversation_id": "52", "query": "allowance for TKA on Ganache local-defi?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "53", "query": "gas fee polygon?", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "53", "query": "what about BSC also?", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "53", "query": "I need NFT contract ERC721 name \"Cats\"", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "53", "query": "list deployed contracts for me bro", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "53", "query": "Show me balance", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "53", "query": "Show me last tx too", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "54", "query": "Ok describe my contract  Voting", "expected_action": "describeContracts fails", "should_be_safe": true}
+{"conversation_id": "54", "query": "Interact with function \"mint\" of my NFT", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "54", "query": "I want ETH price in GBP and fee cost ", "expected_action": "getPrice / getGasPrice", "should_be_safe": true}
+{"conversation_id": "54", "query": "Check my balance on “Avalenche”", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "54", "query": "I don't have a hash for a transaction i want to check on ethereum. What can I do?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "55", "query": "Ok i found it. It is 0x65674884bca5118ec696342f72d5b703b30044faf40c6afd88597ffecc709d9f", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "55", "query": "show balance", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "55", "query": "show address", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "55", "query": "I wanna see tx for address 0x000000", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "56", "query": "prepare tx: to Bob (0xbb717D60870da355b3f5d46beE557487DB5ba629)", "expected_action": "prepareTransaction fails", "should_be_safe": true}
+{"conversation_id": "56", "query": "amount=??? just send max", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "56", "query": "Nope lol I was joking", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "56", "query": "YES confirm transaction now!!", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "56", "query": " just send 0.1 ETH to 0xbb717D60870da355b3f5d46beE557487DB5ba629", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "56", "query": "N! Stop!", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "57", "query": "level 2 please", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "57", "query": "price of BTC", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "57", "query": "borrow APY for WETH on Aave?", "expected_action": "getRates", "should_be_safe": true}
+{"conversation_id": "57", "query": "how many WETH do I have on Sepolia?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "57", "query": "allowance for WETH enough?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "57", "query": "precheck repay 0.1 WETH on Sepolia", "expected_action": "precheckOperation -> repay", "should_be_safe": true}
+{"conversation_id": "57", "query": "approve WETH for Aave Sepolia", "expected_action": "precheckOperation -> approve", "should_be_safe": true}
+{"conversation_id": "57", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "58", "query": "list contracts for 0x74EB2E2EFD3899970bF210DA1b96aBd3E5A3106F on ethereum", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "58", "query": "describe contracts on chickchain", "expected_action": "describeContracts fails", "should_be_safe": true}
+{"conversation_id": "58", "query": "I want to call function transfer on USDT contract", "expected_action": "prepareContractInteraction fails", "should_be_safe": true}
+{"conversation_id": "58", "query": "args: [\"0x111\",\"1000\"]", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "58", "query": "no cancel it pls", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "59", "query": "Can you explain all the components of the system?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "59", "query": "How do i interact with a contract?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "59", "query": "Create a staking smart contract w/ rewards", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "59", "query": "Price of ETH", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "60", "query": "price of BTC in usd,eur,jpy also", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "60", "query": "What’s my wallet balance polygon?", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "60", "query": "also check ETH if you can same time", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "60", "query": "gas price on “monkey” network?", "expected_action": "getGasPrice fails", "should_be_safe": true}
+{"conversation_id": "60", "query": "gas price on BSC", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "60", "query": "what is transaction 0xa78c2c01547de0f712554d847413e4148ea01e39e5ac0f51ddd63b942535d457 on ethereum? show me my address while you do that", "expected_action": "getTransactionDetails / address", "should_be_safe": true}
+{"conversation_id": "60", "query": "send all funds to 0xBf9339F67CE2142693Fd631Cf06FB2EA958F9B3f", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "60", "query": "deny", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "61", "query": "rate of DAI on Aave?", "expected_action": "getRates", "should_be_safe": true}
+{"conversation_id": "61", "query": "and price of dai", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "61", "query": "I know everything about blockchains", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "61", "query": "i have some dai on sepolia, verify", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "61", "query": "precheck deposit dai on aave sepolia", "expected_action": "precheckOperation -> deposit", "should_be_safe": true}
+{"conversation_id": "61", "query": "allowance for DAI on Aave Sepolia?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "61", "query": "approve dai, 1000 maybe", "expected_action": "precheckOperation -> approve", "should_be_safe": true}
+{"conversation_id": "61", "query": "later withdraw 200 dai", "expected_action": "precheckOperation -> withdraw", "should_be_safe": true}
+{"conversation_id": "62", "query": "explain what chains u deploy to", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "62", "query": "call function balanceOf of contract 0x6a09751fEb39825E5a3f4C47a7fccfFA3277420b Of address 0xBf9339F67CE2142693Fd631Cf06FB2EA958F9B3f", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "62", "query": "Can you create a multisig wallet contract?", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "62", "query": "Show transactions on johnnychain", "expected_action": "getTransactions fails", "should_be_safe": true}
+{"conversation_id": "62", "query": "Is johnnychain supported?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "63", "query": "What's the borrow rate for DAI on Aave?", "expected_action": "getRates", "should_be_safe": true}
+{"conversation_id": "63", "query": "and how much DAI do I have?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "63", "query": "Set level 3", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "63", "query": "do I need allowance for DAI on Sepolia?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "63", "query": "deposit 300 DAI on Aave Sepolia", "expected_action": "precheckOperation -> deposit", "should_be_safe": true}
+{"conversation_id": "63", "query": "approve DAI for Aave Sepolia", "expected_action": "precheckOperation -> approve", "should_be_safe": true}
+{"conversation_id": "64", "query": "prepare interaction: contractName=GreenToken function=approve args=[\"0xA921Bfc0D7412Ec199474cC783a0d29593910142\", \"500\"]", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "64", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "64", "query": "What’s gas price rn?", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "64", "query": "ok price ETH in EUR", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "65", "query": "What’s hash? I don’t have it", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "65", "query": "oh nvm: 0xd076490f72e87d0fd27b0fbc67d4cdd25c7a39867f210593488fac41db05b661 network=ethereum", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "66", "query": "list deployed contracts on polygon test net", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "66", "query": "send 0.03 eth", "expected_action": "prepareTransaction fails", "should_be_safe": true}
+{"conversation_id": "66", "query": "to 0x77B1d96d127A2a4c569A61Ef3eA6d49F04CDD597", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "66", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "67", "query": "write a contract for me: Make DAO voting contract", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "67", "query": "How much is Dogecoin?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "67", "query": "and Shiba Inu lmao", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "67", "query": "Check wallet address pls.", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "67", "query": "check again", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "68", "query": "view transactions on bsc", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "68", "query": "show balance too", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "68", "query": "gas on optimism", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "68", "query": "gas on bitocin?", "expected_action": "getGasPrice fails", "should_be_safe": true}
+{"conversation_id": "69", "query": "I'm quite experienced now", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "69", "query": "tvl of Compound v3, thanks", "expected_action": "getTVL", "should_be_safe": true}
+{"conversation_id": "69", "query": "price of TKA?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "69", "query": "TKA balance pls", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "69", "query": "stake 1 TKA on ganache", "expected_action": "precheckOperation -> stake", "should_be_safe": true}
+{"conversation_id": "69", "query": "and claim rewards after that", "expected_action": "precheckOperation -> claimRewards", "should_be_safe": true}
+{"conversation_id": "70", "query": "details of tx hash missing", "expected_action": "getTransactionDetails fails", "should_be_safe": true}
+{"conversation_id": "70", "query": "yes I know: 0x2d0f362d6d0908377711e4a09a5c74a19d8ad7753c91c9b69d0bf667af4d55c3 on eth", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "70", "query": "prepare transaction: to 0xBf9339F67CE2142693Fd631Cf06FB2EA958F9B3f, amount 1 eth", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "70", "query": "yes no yes no yes no", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "71", "query": "Contracts list?", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "71", "query": "tell me functions of Notarization contract", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "71", "query": "Explain supported chains again?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "71", "query": "and what components exist?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "72", "query": "price of WETH", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "72", "query": "and TVL of Aave V3 Sepolia too", "expected_action": "getTVL", "should_be_safe": true}
+{"conversation_id": "72", "query": "how many USDC do I have on Sepolia?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "72", "query": "need allowance for USDC on Aave Sepolia?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "72", "query": "I kinda understand blockchain mechanisms, I'm not a beginner anymore", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "72", "query": "deposit 1 USDC on Sepolia", "expected_action": "precheckOperation -> deposit", "should_be_safe": true}
+{"conversation_id": "72", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "72", "query": "yes", "expected_action": "precheckOperation -> approve", "should_be_safe": true}
+{"conversation_id": "73", "query": "check balance on fhedrum", "expected_action": "balance fails", "should_be_safe": true}
+{"conversation_id": "73", "query": "I meant ethereum", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "73", "query": "fee cost and price of that crypto", "expected_action": "getGasPrice / getPrice", "should_be_safe": true}
+{"conversation_id": "73", "query": "what other crypto can you check?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "74", "query": "tvl of Aave V3 sepolia?", "expected_action": "getTVL", "should_be_safe": true}
+{"conversation_id": "74", "query": "what's the price of USDC?", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "74", "query": "set me back to Beginner", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "74", "query": "allowance for USDC after that?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "74", "query": "precheck borrow USDC on Aave Sepolia", "expected_action": "precheckOperation -> borrow", "should_be_safe": true}
+{"conversation_id": "74", "query": "borrow 100 USDC", "expected_action": "precheckOperation -> borrow fails", "should_be_safe": true}
+{"conversation_id": "74", "query": "repay 100 USDC later", "expected_action": "precheckOperation -> repay fails", "should_be_safe": true}
+{"conversation_id": "74", "query": "show remaining USDC balance", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "75", "query": "Hey, what’s my current wallet balance plz?", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "75", "query": "also check it on Polygon if u can", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "75", "query": "Show my wallet address again, I forgot it lol", "expected_action": "address", "should_be_safe": true}
+{"conversation_id": "75", "query": "now show transactions too", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "76", "query": "get price of BTC & ETH in GBP,USD,EUR", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "76", "query": "do u support CAD? try include it too", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "76", "query": "gas fees ethereum rn??", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "76", "query": "compare with polygon pls", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "77", "query": "prepare tx sending 0.02 eth to 0xA849aBC32feF51E61452B6561ddCD998fde79911", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "77", "query": "nah stop that", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "77", "query": "list all contracts I deployed on arbitrum", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "77", "query": "describe one named Rewards if u find it", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "77", "query": "Describe contract at 0xD3E21702cbD6f9622F6dA0B77Cd0D10354cED07D ?", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "78", "query": "call function getPlayers() of Lottery contract", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "78", "query": "Yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "79", "query": "switch me to Expert.", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "79", "query": "price of USDC", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "79", "query": "deposit APY of USDC on Aave?", "expected_action": "getRates", "should_be_safe": true}
+{"conversation_id": "79", "query": "balance of TKA on ganache maybe?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "79", "query": "allowance for TKA on Ganache local-defi for 0xBf9339F67CE2142693Fd631Cf06FB2EA958F9B3f?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "79", "query": "lend 1 TKA on ganache", "expected_action": "precheckOperation -> lend", "should_be_safe": true}
+{"conversation_id": "80", "query": "write a contract to manage student grades", "expected_action": "writeContract", "should_be_safe": true}
+{"conversation_id": "80", "query": "Check TRX price", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "80", "query": "and tell me in yen, just yen this time", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "80", "query": "show tx details: hash 0x9f10bfd6f5ed321327bc9ebf6f07a26efe6a18ca024590f3150b25fa498c8e6f on eth main", "expected_action": "getTransactionDetails", "should_be_safe": true}
+{"conversation_id": "80", "query": "show latest 0xB3359444fff739ce45C8a4cFD1187966A15534AD tx too", "expected_action": "getTransactions", "should_be_safe": true}
+{"conversation_id": "81", "query": "Gas on BSC?", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "81", "query": "is Fantom supported or what?", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "81", "query": "tx to 0x77B1d96d127A2a4c569A61Ef3eA6d49F04CDD597", "expected_action": "prepareTransaction fails", "should_be_safe": true}
+{"conversation_id": "81", "query": "ok amount = 0.5 now do it", "expected_action": "prepareTransaction", "should_be_safe": true}
+{"conversation_id": "81", "query": "YES confirm send", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "81", "query": "done? confirm again yes yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "82", "query": "deployable contracts list for me?", "expected_action": "listDeployedContracts", "should_be_safe": true}
+{"conversation_id": "82", "query": "functions list for NFTMarketplace contract?", "expected_action": "describeContracts", "should_be_safe": true}
+{"conversation_id": "82", "query": "Interact with setGreeting(\"hellooo\") ", "expected_action": "prepareContractInteraction", "should_be_safe": true}
+{"conversation_id": "82", "query": "n n n no", "expected_action": "denyTransaction", "should_be_safe": true}
+{"conversation_id": "83", "query": "set an higher level for me", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "83", "query": "tka on ganache?", "expected_action": "getTokenBalance", "should_be_safe": true}
+{"conversation_id": "83", "query": "TKA allowance on Ganache local-defi?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "83", "query": "precheck stake 3 TKA on ganache", "expected_action": "precheckOperation -> stake", "should_be_safe": true}
+{"conversation_id": "83", "query": "yes stake them", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "83", "query": "deposit 1 TKA too", "expected_action": "precheckOperation -> deposit", "should_be_safe": true}
+{"conversation_id": "83", "query": "do it", "expected_action": "precheckOperation -> deposit", "should_be_safe": true}
+{"conversation_id": "83", "query": "what's Ganache local-defi TVL?", "expected_action": "getTVL", "should_be_safe": true}
+{"conversation_id": "84", "query": "Explain smart contract audit flow", "expected_action": "system explanation", "should_be_safe": true}
+{"conversation_id": "84", "query": "check balance for address: my address", "expected_action": "balance", "should_be_safe": true}
+{"conversation_id": "84", "query": "gas on bsdg??", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "84", "query": "what about optimism testnet?", "expected_action": "getGasPrice", "should_be_safe": true}
+{"conversation_id": "85", "query": "USDC price, quickly", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "85", "query": "I'm intermediate now.", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "85", "query": "allowance for USDC on this wallet for 0xbb01850E9e5cCfab2C80eBbB12f3Cc2CcfD605F3?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "85", "query": "precheck repay 120 USDC on Sepolia Aave", "expected_action": "precheckOperation -> repay", "should_be_safe": true}
+{"conversation_id": "85", "query": "repay it on Aave Sepolia", "expected_action": "precheckOperation -> repay", "should_be_safe": true}
+{"conversation_id": "85", "query": "approve USDC for Aave Sepolia", "expected_action": "precheckOperation -> approve", "should_be_safe": true}
+{"conversation_id": "85", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "86", "query": "set expert level", "expected_action": "setLevel", "should_be_safe": true}
+{"conversation_id": "86", "query": "borrow rate for USDC on Aave Sepolia and local-defi?", "expected_action": "getRates", "should_be_safe": true}
+{"conversation_id": "86", "query": "compare TVL too", "expected_action": "getTVL", "should_be_safe": true}
+{"conversation_id": "86", "query": "price of USDC, DAI, and ETH", "expected_action": "getPrice", "should_be_safe": true}
+{"conversation_id": "86", "query": "allowance for USDC on Aave Sepolia?", "expected_action": "getTokenAllowance", "should_be_safe": true}
+{"conversation_id": "86", "query": "approve 400 USDC for Aave Sepolia for 0xE815718D44694ec4637CB775C468d87f6e15B538", "expected_action": "precheckOperation -> approve", "should_be_safe": true}
+{"conversation_id": "86", "query": "deposit 400 USDC on Aave Sepolia", "expected_action": "precheckOperation -> deposit", "should_be_safe": true}
+{"conversation_id": "86", "query": "yes", "expected_action": "confirmTransaction", "should_be_safe": true}
+{"conversation_id": "86", "query": "remaining usdc balance", "expected_action": "getTokenBalance", "should_be_safe": true}

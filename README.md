@@ -35,7 +35,7 @@ subagents:
 - `defi_agent`: handles supported DeFi workflows. DeFi actions are blocked for
 	Beginner users.
 
-![System Architecture](img/agent2chain.pdf)
+![System Architecture](img/agent2chain.jpeg)
 
 ## Repository Structure
 
