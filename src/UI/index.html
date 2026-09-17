@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent2Chain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Orbitron:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="pendingTxSidebar" class="pending-sidebar" aria-live="polite" aria-label="Pending transactions"></div>
+
+  <main class="container">
+    <h1>Agent2Chain</h1>
+
+    <section class="wallet-row">
+      <button id="connectBtn" class="connect-btn">
+        <span class="label">Connect Wallet</span>
+      </button>
+      <div class="right-icons">
+        <div class="wallet-pill" id="walletStatus">Wallet not connected</div>
+        <div class="knowledge-info-wrap">
+          <button
+            id="knowledgeInfoBtn"
+            class="knowledge-info-btn"
+            type="button"
+            aria-label="Knowledge level info"
+            aria-describedby="knowledgeTooltip"
+          >
+            <img class="knowledge-info-icon" src="./img/Infobox_info_icon.svg.png" alt="" aria-hidden="true" />
+          </button>
+          <div id="knowledgeTooltip" class="knowledge-tooltip" role="tooltip">
+            This agent uses a knowledge level to tailor behavior and responses.
+            <ul class="knowledge-level-list">
+              <li><strong>Level 1 - Beginner:</strong> detailed guidance and simple language.</li>
+              <li><strong>Level 2 - Intermediate:</strong> balanced guidance with moderate technical detail.</li>
+              <li><strong>Level 3 - Expert:</strong> concise responses with advanced terminology.</li>
+            </ul>
+            You can switch level with prompts like
+            <em>"Switch to Intermediate level"</em>,
+            <em>"Act like I'm an expert"</em>, or
+            <em>"Go to level 1"</em>.<br /><br />
+            <strong>The current level of knowledge is: <span id="knowledgeLevelValue">Beginner</span></strong>
+          </div>
+        </div>
+        <div class="info-toggle-wrap">
+          <button
+            id="infoToggleBtn"
+            class="info-toggle-btn"
+            type="button"
+            aria-label="Show Info Panel"
+            title="Show Info Panel"
+          >
+            <img
+              id="infoToggleIcon"
+              class="info-toggle-icon"
+              src="./img/visible-eye.svg"
+              alt="Show Info Panel"
+            />
+          </button>
+        </div>
+        <div class="mm-icon-wrap">
+          <img
+            id="mmStatusIcon"
+            class="mm-icon dimmed"
+            alt="MetaMask"
+            src="./img/MetaMask_Fox.svg.png"
+            aria-describedby="mmTooltip"
+          />
+          <div id="mmTooltip" class="mm-tooltip hidden" role="tooltip"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="chatContainer" class="chat-container" aria-live="polite">
+      <div class="message ai-message">
+        Hello! I'm your personal blockchain assistant.<br />
+        Connect your MetaMask wallet to start.
+      </div>
+    </section>
+
+    <section class="input-container">
+      <input id="userInput" type="text" placeholder="Write a message..." disabled />
+      <button id="sendBtn" class="send-btn" disabled>Send</button>
+    </section>
+
+    <section class="deploy-row">
+      <button id="deployContractBtn" class="deploy-btn" disabled>
+        Deploy Smart Contract
+      </button>
+      <button id="scanContractBtn" class="scan-btn" disabled>
+        Smart Contract Audit
+      </button>
+    </section>
+
+    <section id="deployMenu" class="deploy-menu hidden" aria-hidden="true">
+      <div class="deploy-card" role="dialog" aria-labelledby="deployTitle">
+        <div class="deploy-header">
+          <h2 id="deployTitle">Deploy Smart Contract</h2>
+          <button id="closeDeployMenuBtn" class="close-btn" type="button">Close</button>
+        </div>
+
+        <label class="upload-row" for="solFileInputDeploy">Upload Solidity File (.sol)</label>
+        <input id="solFileInputDeploy" class="sol-input" type="file" accept=".sol" />
+        <div id="solFileStatusDeploy" class="file-status">No file uploaded</div>
+
+        <label class="upload-row" for="constructorArgsDeploy">Constructor Args (JSON array, optional)</label>
+        <input
+          id="constructorArgsDeploy"
+          class="constructor-input"
+          type="text"
+          placeholder='Example: ["hello", 42]'
+        />
+
+        <pre id="solFilePreviewDeploy" class="code-preview" aria-live="polite"></pre>
+
+        <div class="deploy-actions">
+          <button id="confirmDeployBtn" class="deploy-confirm-btn" type="button" disabled>Deploy</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="scanMenu" class="deploy-menu hidden" aria-hidden="true">
+      <div class="deploy-card" role="dialog" aria-labelledby="scanTitle">
+        <div class="deploy-header">
+          <h2 id="scanTitle">Scan Smart Contract</h2>
+          <button id="closeScanMenuBtn" class="close-btn" type="button">Close</button>
+        </div>
+
+        <label class="upload-row" for="solFileInputScan">Upload Solidity File (.sol)</label>
+        <input id="solFileInputScan" class="sol-input" type="file" accept=".sol" />
+        <div id="solFileStatusScan" class="file-status">No file uploaded</div>
+
+        <pre id="solFilePreviewScan" class="code-preview" aria-live="polite"></pre>
+
+        <div class="deploy-actions">
+          <button id="confirmScanBtn" class="scan-confirm-btn" type="button" disabled>Start Auditing</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside id="infoPanel" class="info-panel hidden" aria-live="polite" aria-label="Agent highlights">
+    <div class="info-panel-header">
+      <span class="title">Agent Info</span>
+    </div>
+    <div id="infoPanelBody" class="info-panel-body"></div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

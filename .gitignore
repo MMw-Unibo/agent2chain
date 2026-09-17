@@ -1,13 +1,72 @@
-# Environment variables
+### Python bytecode / caches ###
+__pycache__/
+*.py[cod]
+*$py.class
+
+### Packaging / build artifacts ###
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+.Python
+
+### Test / coverage ###
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+### Linters / type checkers ###
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+### Environments ###
 .env
+.env.*
+!.env.example
+.venv/
+.venv*
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 
-# Generated artifacts
-.reports/
-.generated-contracts/
+### Jupyter / IPython ###
+.ipynb_checkpoints/
+profile_default/
+
+### Logs / runtime artifacts ###
+*.log
+logs/
+.logs/
 .data/
+.reports/
 
-# Node.js
-node_modules/
+### Local datasets / tools ###
+datasets/
+tools/
 
-# VS Code settings
-.vscode/
+### Project-specific generated metadata ###
+src/agent4blockchain_adk.egg-info/
+
+### OS files ###
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+### Editors / IDEs ###
+.idea/
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+
+.adk/

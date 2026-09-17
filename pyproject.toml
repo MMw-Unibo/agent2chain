@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent4blockchain-adk"
+version = "0.1.0"
+description = "UI-first bootstrap for Agent4Blockchain (ADK/Python)"
+dependencies = [
+	"google-adk",
+	"google-genai",
+	"litellm",
+	"mcp",
+	"chaingpt",
+	"py-solc-x",
+	"eth-abi",
+	"eth-utils",
+	"eth-hash[pycryptodome]"
+]
+keywords = ["adk", "agent", "blockchain", "ui"]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
